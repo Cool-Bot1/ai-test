@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1>Real Or AI?</h1>
-    <div>
-        <img><br><br>
-        {% if explanation %}
-        <h3>{{ans}}</h2><br>
-        <h3>{{explanation}}</h2>
+    <h1 class="element">Real Or AI?</h1>
+    <div class="center">
+        {%if final%}
+        <h3 class="element">The End</h3>
         {%else%}
-        <form action="/1" method="POST">
-            <input type="submit" name="AI1" value="AI">
-            <input type="submit" name="Real1" value="Real"><br><br>
-        </form>
+        <div class="box">
+            <img src="{{img_src[img_num]}}"><br><br>
+        </div>
+        {% if explanation %}
+        <div class="box">
+            <h3 >{{ans}}</h2><br>
+            <h3 >{{explanation}}</h2>
+            <form  action="/" method="POST"><input type="submit" name="next1" value="Next"></form>
+        </div>
+        {%else%}
+        <div class="box">
+            <form action="/1" method="POST">
+                <input type="submit" name="AI1" value="AI">
+                <input type="submit" name="Real1" value="Real"><br><br>
+            </form>
+        </div>
         {% endif %}
+        {%endif%}
     </div>
-    <h3>You've gotten {{scr}} /10</h3>
+    <h3 class="element" style="display:flex;align-items:end;">You've gotten {{scr}} /10</h3>
 </body>
 </html>
