@@ -13,11 +13,11 @@
         <h3 class="element">The End</h3>
         {%else%}
         <div class="box">
-            <img src="{{img_src[img_num]}}"><br><br>
+            <img src="{{img_src[img]}}" width="75%" height="75%"><br><br>
         </div>
         {% if explanation %}
         <div class="box">
-            <h3 >{{ans}}</h2><br>
+            <h3 >{{ans}}</h2>
             <h3 >{{explanation}}</h2>
             <form  action="/" method="POST"><input type="submit" name="next1" value="Next"></form>
         </div>
