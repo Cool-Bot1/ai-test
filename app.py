@@ -18,21 +18,23 @@ def clear():
 scr=int(0)
 used=[False,False,False,False,False,False,False,False,False,False]
 
-img_list=[False,False,False,True,True,True,True,True,True,True]
+img_list=[False,False,False,False,False,False,False,False,True,False]
 explain=[
     "This is a photo of a Flamingo from a strange angle. It was submitted in an AI image generation competion and won, however its creator revealed it was real",
-    "This is a Jerboa, if you thought this is AI you probably hurt that little goober's feelings",
+    "This is a Jerboa, we caught him at a bad time",
     "This is a Proboscis Monkey, he looks a bit like squidward",
-    "This is a Saiga Antelope it lives in Russia and is on the verge of extinction (I will say the lighting is a somewhat similar to AI)",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
+    "This is a Saiga Antelope, it lives in Russia and is on the verge of extinction",
+    "This is a Basking Shark, it is the second largest type of shark",
+    "This is a Tassled Wobbegon, it is a type of carpet shark",
+    "This is a Tarsier, it has big eyes",
+    "This is a Colugo, it is a type of flying lemur",
+    "This is an AI-generated image of a Streaked Tenrec, it would live in Madagascar if it wasn't an AI Image",
+    "This is a Glass Frog, its organs can be seen through its body",
 ]
+
 img_num= -1
 img=0
+
 img_src=[
     "static/img_1.jpeg",
     "static/img_2.png",
@@ -42,8 +44,8 @@ img_src=[
     "static/img_6.jpeg",
     "static/img_7.jpg",
     "static/img_8.jpg",
+    "static/img_10.webp",
     "static/img_9.jpg",
-    
 ]
 
 final=False

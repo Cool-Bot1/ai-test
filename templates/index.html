@@ -10,27 +10,27 @@
     <h1 class="element">Real Or AI?</h1>
     <div class="center">
         {%if final%}
-        <h3 class="element">The End</h3>
+        <h1 class="butbox">You've gotten {{scr}} /10</h3>
         {%else%}
         <div class="box">
             <img src="{{img_src[img]}}" width="75%" height="75%"><br><br>
         </div>
         {% if explanation %}
-        <div class="box">
+        <div class="butbox">
             <h3 >{{ans}}</h2>
             <h3 >{{explanation}}</h2>
-            <form  action="/" method="POST"><input type="submit" name="next1" value="Next"></form>
+            <form  action="/" method="POST"><input type="submit" class="button" name="next1" value="Next"></form>
         </div>
         {%else%}
-        <div class="box">
+        <div class="butbox">
             <form action="/1" method="POST">
-                <input type="submit" name="AI1" value="AI">
-                <input type="submit" name="Real1" value="Real"><br><br>
+                <input type="submit" class="button" name="AI1" value="AI">
+                <input type="submit" class="button" name="Real1" value="Real"><br><br>
             </form>
         </div>
         {% endif %}
+        <h3 class="element" style="display:flex;align-items:end;">You've gotten {{scr}} /10</h3>
         {%endif%}
     </div>
-    <h3 class="element" style="display:flex;align-items:end;">You've gotten {{scr}} /10</h3>
 </body>
 </html>
