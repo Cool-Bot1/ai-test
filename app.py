@@ -10,9 +10,10 @@ def clear():
     global scr
     global final
     global img
-    if scr==10:
+    if img_num>=9:
         final=True
     img+=1
+    print("image num: ", img_num)
     return render_template ("index.html",explanation=False,ans=False,scr=scr,img_src=img_src,img_num=img_num,final=final,img=img)
 
 scr=int(0)
@@ -70,7 +71,7 @@ def check(choice,x):
             ans="You're wrong its's real"
     return render_template ("index.html",explanation =explain[x],ans=ans,scr=scr,img_src=img_src,img_num=img_num,img=img)
 
-@app.route("/1",methods=['POST'])
+@app.route("/answer",methods=['POST'])
 def respond():
     global img_num
     global final
@@ -81,7 +82,8 @@ def respond():
         elif 'Real' in request.form.values():
             temp=False
         return check(temp,img_num)
-    elif img_num==10:
+    elif img_num>=9:
+        print("image num: ", img_num)
         return render_template("index.html",final=True,scr=scr,img_src=img_src,img_num=img_num)
 
 # main driver function

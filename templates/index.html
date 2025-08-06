@@ -13,7 +13,7 @@
         <h1 class="butbox">You've gotten {{scr}} /10</h3>
         {%else%}
         <div class="box">
-            <img src="{{img_src[img]}}" width="75%" height="75%"><br><br>
+            <img src="{{img_src[img]}}" width="60%" height="60%"><br><br>
         </div>
         {% if explanation %}
         <div class="butbox">
@@ -23,7 +23,7 @@
         </div>
         {%else%}
         <div class="butbox">
-            <form action="/1" method="POST">
+            <form action="/answer" method="POST">
                 <input type="submit" class="button" name="AI1" value="AI">
                 <input type="submit" class="button" name="Real1" value="Real"><br><br>
             </form>
