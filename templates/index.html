@@ -10,11 +10,10 @@
     <h1 class="element">Real Or AI?</h1>
     <div class="center">
         {%if final%}
-        <h1 class="butbox">You've gotten {{scr}} /10</h3>
-        {%else%}
-        <div class="box">
-            <img src="{{img_src[img]}}" width="60%" height="60%"><br><br>
-        </div>
+        <h1 class="butbox">You've gotten {{scr}} /10</h1>
+        <h2>This project was made to highlight how repeated exposure to AI can make us question the natural world and scientific discoveries</h2>
+        {%else%} 
+        <img src="{{img_src[img]}}" class="box" width="60%" height="60%"><br><br>
         {% if explanation %}
         <div class="butbox">
             <h3 >{{ans}}</h2>

@@ -4,7 +4,6 @@
 }
 
 .box{
-    padding-top:20px;
     margin:5px;
     border-width: thick;
     border-style: solid;
@@ -12,9 +11,10 @@
     width: 50%;
     text-align: center;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
 }
 .butbox{
-    padding-top:20px;
     margin:5px;
     flex-grow: 5;
     width: 50%;
@@ -52,6 +52,7 @@
 
 .center{
     justify-items: center;
+
 }
 
 .button{
